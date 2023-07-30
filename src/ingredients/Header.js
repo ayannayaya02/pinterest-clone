@@ -1,5 +1,7 @@
 import React from 'react';
-import PinterestIcon from '@material-ui/icons/Pinterest'
+import PinterestIcon from "@mui/icons-material/Pinterest";
+import Icon from '@mui/core/Icon';
+
 
 function Header() {
   return (
