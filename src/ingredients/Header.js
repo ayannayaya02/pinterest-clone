@@ -2,6 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import Icon from "@mui/material/Icon";
+import SearchIcon from "@mui/icons-material/Search";
+import SearchIconButton from "@mui/material/IconButton";
+import FaceIcon from "@mui/icons-material/Face";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import TextsmsIcon from "@mui/icons-material/Textsms";
+import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
+
+/**Make different file for this page it's getting to long. */
+/*SearchIcon is a componentso it is a self clsoing tag */
 
 function Header() {
   return (
@@ -23,24 +32,32 @@ function Header() {
 
         <SearchWrapper>
           <SearchBar>
-            {/*
             <SearchIconButton>
-            
-              <SearchIcon/>
+              <SearchIcon />
             </SearchIconButton>
-  */}
             <form>
               <input type="text" />
               <button type="submit"></button>
             </form>
           </SearchBar>
         </SearchWrapper>
-        {/*
 
-<IconWrapper>
+        <IconWrapper>
+          <IconButton>
+            <NotificationsActiveIcon />
+          </IconButton>
+          <IconButton>
+            <TextsmsIcon />
+          </IconButton>
 
-</IconWrapper>
-*/}
+          <IconButton>
+            <FaceIcon />
+          </IconButton>
+
+          <IconButton>
+            <KeyboardArrowDownIcon />
+          </IconButton>
+        </IconWrapper>
       </Wrapper>
     </div>
   );
