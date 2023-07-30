@@ -2,6 +2,7 @@ import './App.css';
 import React from "react";
 import Header from "./ingredients/Header";
 
+/*For any components don't forget to also import them above! */
 
 function App() {
   return (
