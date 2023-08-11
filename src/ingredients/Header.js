@@ -9,12 +9,11 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import TextsmsIcon from "@mui/icons-material/Textsms";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 
-/**Make different file for this page it's getting to long. */
+/**Make different file for this page it's getting too long. */
 /*SearchIcon is a componentso it is a self clsoing tag */
 
 function Header() {
   return (
-    <div>
       <Wrapper>
         <LogoWrapper>
           <Icon>
@@ -59,8 +58,7 @@ function Header() {
           </IconButton>
         </IconWrapper>
       </Wrapper>
-    </div>
-  );
+  )
 }
 
 export default Header
@@ -71,6 +69,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   height: 56px;
+  border-radius:5px;
   padding: 12px 4px 4px 16px;
   background-color: #ffff;
   color: black;
@@ -165,5 +164,13 @@ outline:none;
 input:hover{
   outline:none;
 }
+
+`
+
+const IconWrapper=styled.div`
+display:flex;
+`
+
+const IconButton=styled.div`
 
 `
