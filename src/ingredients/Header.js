@@ -69,17 +69,18 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   height: 56px;
-  border-radius:5px;
-  padding: 12px 4px 4px 16px;
+  border-radius: 5px;
+  padding:15px;
   background-color: #ffff;
   color: black;
-`
+`;
 /*Pinterest Logo is considered a svg icon why it's class name is the title */
 
-const LogoWrapper = styled.div`
+const LogoWrapper = styled.div `
   .MuiSvgIcon-root {
     color: #e60023;
-    font-size: 32px;
+    display:inline-block;
+    font-size:75px;
     cursor: pointer;
   }
 `
@@ -90,10 +91,11 @@ const Home =styled.div
 `
 display:flex;
 height:48px;
-min-width:123px;
+min-width:115px;
+padding:5px 10px 5px 10px;
 align-items:center;
 justify-content:center;
-border-radius:24px;
+border-radius:35px;
 cursor:pointer;
 `
 const HomeButton=styled(Home)`
@@ -167,9 +169,12 @@ input:hover{
 
 `
 
-const IconWrapper=styled.div`
-display:flex;
-`
+const IconWrapper = styled.div`
+  display: flex;
+  padding: 15px;
+
+
+`;
 
 const IconButton=styled.div`
 
