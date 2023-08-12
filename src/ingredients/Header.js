@@ -9,16 +9,18 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import TextsmsIcon from "@mui/icons-material/Textsms";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 
-/**Make different file for this page it's getting too long. */
+/**Make different file for this page it's getting too long.
+ * props:{
+ * onSubmit:onSubmitSearch}
+ */
 /*SearchIcon is a componentso it is a self clsoing tag */
 
-function Header() {
+function Header(props) {
   const [input, setInput] = useState("");
 
   const onSearchSubmit = (e) => {
     e.preventDefault();
-    console.log("Result", input);
-  };
+props.onSubmit(input)  };
 
   return (
     <Wrapper>
