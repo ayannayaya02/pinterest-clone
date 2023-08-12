@@ -76,14 +76,20 @@ const Wrapper = styled.div`
 `;
 /*Pinterest Logo is considered a svg icon why it's class name is the title */
 
-const LogoWrapper = styled.div `
+const LogoWrapper = styled.div`
   .MuiSvgIcon-root {
     color: #e60023;
-    display:inline-block;
-    font-size:75px;
+    display: inline-block;
+    font-size: 25px;
     cursor: pointer;
   }
-`
+
+  :hover {
+    cursor: pointer;
+    background-color: #e1e1e1;
+    border-radius:12px;
+  }
+`;
 
 /*Styling HomeButton No Hover */
 
