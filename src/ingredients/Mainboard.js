@@ -9,10 +9,10 @@ function Mainboard(props) {
    
     <Wrapper>
         <Container>
-            {pins.map((pin)=>
+            {pins.map((pin,index)=>
             {
                 let {urls}=pin;
-        return<Pin urls={urls}/>
+        return<Pin key={index} urls={urls}/>
             })}
         </Container>
     </Wrapper>
