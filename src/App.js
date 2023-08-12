@@ -36,8 +36,23 @@ console.log(term)
       setNewPins(newNew);
 })
 }
+const getNewPins= () =>{
+let promises=[];
+let pinData=[];
+let pins=['ocean','Paris', 'dogs', 'wolves', 'hummingbirds', 'martial arts', 'food', 'travel']
+
+pins.forEach((pinTerm)=> {
+promises.push(
+  getImages(pinTerms)
+)
+})
 
 
+useEffect(()=>
+{
+  getNewPins(),
+
+}, [])
   return (
     <div className="App">
       <header className="App-header">
