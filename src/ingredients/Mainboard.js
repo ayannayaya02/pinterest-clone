@@ -33,7 +33,12 @@ display:flex;
 
 const Container=styled.div`
 background-color:#fffff;
-display:flex;
 width:80%;
+column-count:4;
+column-gap:50px;
+margin:0 auto;
+background-color: #fffff;
+height:100%;
+max-width:1300px;
 
 `
