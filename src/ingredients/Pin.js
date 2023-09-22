@@ -21,18 +21,30 @@ display:inline-flex;
 padding:8px;
 `
 
-const Container=styled.div`
-display:flex;
-box-sizing:border-box;
-width:236px;
-cursor:pointer;
-align-items:center;
+const Container = styled.div`
+  display: flex;
+  box-sizing: border-box;
+  width: 236px;
+  cursor: pointer;
+  align-items: center;
 
-img{
-    width:100%;
-    display:flex;
+  img {
+    width: 100%;
+    display: flex;
 
-    border-radius:16px;
-    object-fit:cover;
-}
-`
+    border-radius: 16px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) img {
+    width: 100%;
+    display: inline;
+padding:50px;
+    column-count:auto;
+    column-width:100px;
+    column-gap:100px;
+    margin: 25px;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+`;

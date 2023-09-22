@@ -20,18 +20,23 @@ function App() {
   };
 
   const onSearchSubmit = (term) => {
+    for (let i=0; i<onSearchSubmit.length; i++){
     console.log(term);
     getImages(term).then((res) => {
       let results = res.data.results;
 
       let newNew = [...results, ...pins];
 
-      newNew.sort(function (a, b) {
+      newNew.map(function (a, b) {
         return 0.5 - Math.random();
+        onSearchSubmit.sort(newNew);
+
       });
 
       setNewPins(newNew);
+
     });
+  }
   };
   const getNewPins = () => {
     let promises = [];
@@ -51,8 +56,15 @@ function App() {
       "hummingbirds",
       "martial arts",
       "food",
-      "travel",
-    ];
+      "travel"
+    ]; 
+
+    for (let i=0; i < getNewPins.length; i++){
+                        return 0.5 - Math.random();
+                        while(getNewPins===pins){ 
+                          return pins.sort(pinData);
+
+  
 
     pins.forEach((pinTerm) => {
       promises.push(
@@ -60,19 +72,38 @@ function App() {
           let results = res.data.results;
           pinData = pinData.concat(results);
           pinData.sort(function (a, b) {
-            return 0.5 - Math.random();
           });
         })
       );
     });
     Promise.all(promises).then(() => {
-      setNewPins(pinData);
+      setNewPins(pinData, promises);
+                  return 0.5 - Math.random();
+
     });
+
+    const PinData = () => {
+      PinData.sort(pins).then(() => {
+        setNewPins.sort(pinData).all(promises);
+           setNewPins.all(pinData).all(pins);
+                       return 0.5 - Math.random();
+
+
+
+      });
+    };
+
+  }
+}
+
   };
+  
+
 
   useEffect(() => {
     getNewPins();
   }, []);
+
 
   return (
     <div className="App">

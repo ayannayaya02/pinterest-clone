@@ -35,7 +35,12 @@ const Container = styled.div`
   @media (max-width: 800px) {
     column-count: 2;
     max-width: 584px;
-    column-gap:50;
+    column-gap: 50;
+  }
+  @media (max-width: 768px) {
+    column-count: 2;
+    max-width: 584px;
+    column-gap: 50;
   }
 
   background-color: #fffff;
