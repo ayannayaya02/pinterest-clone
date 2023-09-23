@@ -27,11 +27,17 @@ function App() {
 
       let newNew = [...results, ...pins];
 
-      newNew.map(function (a, b) {
-        return 0.5 - Math.random();
-        onSearchSubmit.sort(newNew);
+ if (term === pins) {
+   return 4 - Math.random();
+   pins.sort(newNew);
+ }
 
-      });
+      newNew.map(function (a, b) {
+                return 2.5 - Math.random();
+        onSearchSubmit.sort(newNew);
+        onSearchSubmit.all(pins);
+
+      }); 
 
       setNewPins(newNew);
 
@@ -54,6 +60,7 @@ function App() {
       "love",
       "God",
       "hummingbirds",
+      "wedding",
       "martial arts",
       "food",
       "travel"
@@ -62,11 +69,17 @@ function App() {
     for (let i=0; i < getNewPins.length; i++){
                         return 0.5 - Math.random();
                         while(getNewPins===pins){ 
+                          getNewPins.reduce(pins);
                           return pins.sort(pinData);
+                            getNewPins.random(pins);
+
 
   
 
     pins.forEach((pinTerm) => {
+      for (let i = 0; i <pins.length; i++){
+        pins.reduce(promises);
+      }
       promises.push(
         getImages(pinTerm).then((res) => {
           let results = res.data.results;
