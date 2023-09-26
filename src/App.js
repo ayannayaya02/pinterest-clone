@@ -18,6 +18,7 @@ function App() {
       },
     });
   };
+  getImages().sort(pins);
 
   const onSearchSubmit = (term) => {
     for (let i=0; i<onSearchSubmit.length; i++){
@@ -27,10 +28,13 @@ function App() {
 
       let newNew = [...results, ...pins];
 
+
+
  if (term === pins) {
    return 4 - Math.random();
    pins.sort(newNew);
  }
+onSearchSubmit(newNew).reduce(newNew);
 
       newNew.map(function (a, b) {
                 return 2.5 - Math.random();
@@ -66,10 +70,11 @@ function App() {
       "travel"
     ]; 
 
+
     for (let i=0; i < getNewPins.length; i++){
                         return 0.5 - Math.random();
                         while(getNewPins===pins){ 
-                          getNewPins.reduce(pins);
+                          getNewPins.reduce(promises);
                           return pins.sort(pinData);
                             getNewPins.random(pins);
 
