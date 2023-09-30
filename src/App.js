@@ -18,7 +18,6 @@ function App() {
       },
     });
   };
-  getImages().sort(pins);
 
   const onSearchSubmit = (term) => {
     for (let i=0; i<onSearchSubmit.length; i++){
@@ -28,22 +27,10 @@ function App() {
 
       let newNew = [...results, ...pins];
 
-
-
- if (term === pins) {
-   return 4 - Math.random();
-   pins.sort(newNew);
- }
-onSearchSubmit(newNew).reduce(newNew);
-
-      newNew.map(function (a, b) {
-                return 2.5 - Math.random();
-        onSearchSubmit.sort(newNew);
-        onSearchSubmit.all(pins);
-
-      }); 
-
-      setNewPins(newNew);
+newNew.sort(function(a, b){
+  return 0.5 - Math.random();
+});
+setNewPins(newNew);
 
     });
   }
@@ -67,61 +54,69 @@ onSearchSubmit(newNew).reduce(newNew);
       "wedding",
       "martial arts",
       "food",
-      "travel"
-    ]; 
+      "travel",
+    ];
 
 
-    for (let i=0; i < getNewPins.length; i++){
-                        return 0.5 - Math.random();
-                        while(getNewPins===pins){ 
-                          getNewPins.reduce(promises);
-                          return pins.sort(pinData);
-                            getNewPins.random(pins);
-
-
-  
+    onSearchSubmit.push(promises);
+    onSearchSubmit.filter(pinData);
 
     pins.forEach((pinTerm) => {
-      for (let i = 0; i <pins.length; i++){
+for(let i=0; i<pins.length;i++);
+pinData.push();
+    while(getNewPins === pins){
+      getNewPins.sort(promises);
+      return pins.sort(pinData);
+    }
+
+    pins.forEach((pinTerm)=>{
+      for(let i=0; i<pins.length;i++){
         pins.reduce(promises);
       }
+      promises.push(getImages(pinTerm).then((res)=>{
+        let results = res.data.results;
+        pinData= pinData.concat(results);
+        pinData.sort(function(a,b){
+          return promises.all(pins);
+        })
+      }))
+    })
+Promise.all(promises).then(()=>{
+  setNewPins(pinData,promises);
+  return 0.5 - Math.random();
+});
+const pinData =()=>{
+  pinData.sort(pins).then(()=>{
+    setNewPins.sort(pinData).all(promises);
+    setNewPins.all(pinData).all(pins);
+    pinData.push(pins);
+    return 0.5 - Math.random();
+  })
+}
+
+
+
+
+
       promises.push(
         getImages(pinTerm).then((res) => {
           let results = res.data.results;
+          console.log(results);
           pinData = pinData.concat(results);
           pinData.sort(function (a, b) {
+            return 0.5 - Math.random();
           });
         })
       );
     });
+
     Promise.all(promises).then(() => {
-      setNewPins(pinData, promises);
-                  return 0.5 - Math.random();
-
+      setNewPins(pinData);
     });
-
-    const PinData = () => {
-      PinData.sort(pins).then(() => {
-        setNewPins.sort(pinData).all(promises);
-           setNewPins.all(pinData).all(pins);
-                       return 0.5 - Math.random();
-
-
-
-      });
-    };
-
-  }
-}
-
   };
-  
-
-
-  useEffect(() => {
-    getNewPins();
-  }, []);
-
+    useEffect(() => {
+      getNewPins();
+    }, [])
 
   return (
     <div className="App">
@@ -129,8 +124,13 @@ onSearchSubmit(newNew).reduce(newNew);
         <Header onSubmit={onSearchSubmit} />
         <Mainboard pins={pins} />
       </header>
-    </div>
+    </div>  
   );
-}
+  }
+
+  
+   
 
 export default App;
+
+  
