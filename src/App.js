@@ -1,11 +1,11 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
+import React, {useState, useEffect } from "react";
 import Header from "./ingredients/Header";
 import Mainboard from "./ingredients/Mainboard";
 import splash from "./api/splash";
 import "./App.css";
 
-/*Trick for making files quicker is using rfce and tab */
+/*Trick for making files quicker is typing rfce and pressing tab */
 /*For any components don't forget to also import them above! */
 
 function App() {
@@ -57,39 +57,52 @@ setNewPins(newNew);
       "travel",
     ];
 
+pins.forEach((pinTerm)=>{
+  for(let i=0; i<pins.length;i++);
+  pinData.push();
+  while(getNewPins===pins){
+    getNewPins.sort(promises);
+    return pins.sort(pinData);
+  }
+})
 
-    onSearchSubmit.push(promises);
-    onSearchSubmit.filter(pinData);
 
-    pins.forEach((pinTerm) => {
-for(let i=0; i<pins.length;i++);
-pinData.push();
-    while(getNewPins === pins){
-      getNewPins.sort(promises);
-      return pins.sort(pinData);
-    }
 
-    pins.forEach((pinTerm)=>{
-      for(let i=0; i<pins.length;i++){
-        pins.reduce(promises);
-      }
-      promises.push(getImages(pinTerm).then((res)=>{
-        let results = res.data.results;
-        pinData= pinData.concat(results);
-        pinData.sort(function(a,b){
-          return promises.all(pins);
-        })
-      }))
+
+
+
+
+
+
+pins.forEach((pinTerm) => {
+  promises.push(
+    getImages(pinTerm).then((res)=>{
+      let results = res.data.results;
+      console.log(results);
+      pinData=pinData.concat(results)
+      pinData.sort(function(a,b){
+        return 0.5 - Math.random();
+      });
     })
-Promise.all(promises).then(()=>{
-  setNewPins(pinData,promises);
-  return 0.5 - Math.random();
+  );
 });
-const pinData =()=>{
+Promise.all(promises).then(()=>{
+  setNewPins(pinData);
+});
+  };
+
+
+
+
+
+const pinData=()=>{
   pinData.sort(pins).then(()=>{
-    setNewPins.sort(pinData).all(promises);
-    setNewPins.all(pinData).all(pins);
+    let promises;
+    setNewPins.map(pinData).all(promises);
+    setNewPins.filter(pinData).all(pins);
     pinData.push(pins);
+    pins.push(pinData).push(promises);
+    pinData.splice(pins);
     return 0.5 - Math.random();
   })
 }
@@ -98,36 +111,18 @@ const pinData =()=>{
 
 
 
-      promises.push(
-        getImages(pinTerm).then((res) => {
-          let results = res.data.results;
-          console.log(results);
-          pinData = pinData.concat(results);
-          pinData.sort(function (a, b) {
-            return 0.5 - Math.random();
-          });
-        })
-      );
-    });
+  useEffect(()=>{
+    getNewPins();
+  }, []);
 
-    Promise.all(promises).then(() => {
-      setNewPins(pinData);
-    });
-  };
-    useEffect(() => {
-      getNewPins();
-    }, [])
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <Header onSubmit={onSearchSubmit} />
-        <Mainboard pins={pins} />
-      </header>
-    </div>  
+    <div className = "app">
+      <Header onSubmit = {onSearchSubmit}/>
+      <Mainboard pins = {pins}/>
+      </div>
   );
-  }
-
+}
   
    
 
